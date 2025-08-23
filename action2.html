@@ -1,0 +1,127 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: royalblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello, World!</h1>
+    <p>This is a basic HTML page with a button below.</p>
+    
+    <button onclick="sayHello()">Click Me</button>
+
+    <script>
+        function sayHello() {
+            alert("fuckoff");
+        }
+    </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-tracker.css">
+    <title>Tracker</title>
+    <style>
+        .action1{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+    
+        
+
+
+        
+
+    </style>
+</head>
+<body style="background:bisque;">
+    <div class="container">
+        <div class="action1">
+            <h3><strong>The E-waste Disposal has been started</strong></h3>
+            <img style="height: 400px; width: 300px;" src="dustbin.png" alt="">
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+              const weight=getQueryParam("weight");
+              const metal=getQueryParam("metal");
+              const density=getQueryParam("density");
+              const w=document.getElementById("w");
+              const m=document.getElementById("m");
+              const d=document.getElementById("d");
+              if(weight&& metal&& density){
+                w.textContent=weight;
+                m.textContent=metal;
+                d.textContent=density;
+
+              }
+              
+            // Get Bin ID from URL
+            const binId = getQueryParam("id");
+            const binIdDisplay = document.getElementById("binIdDisplay");
+
+            if (binId) {
+                binIdDisplay.textContent = `BIN Status:(${binId})`;
+            } else {
+                binIdDisplay.textContent = "Bin Status - No ID Selected";
+            }
+        });
+        function action(){
+              let b=document.getElementById("m").innerText;
+              let c=document.getElementById("d").innerText;
+              c=parseFloat(c);
+              if(b==="true"){
+                 let avg=8.0; // estimated avg density of e-waste metals...
+                let k=c/avg;// calculating metal percentage;
+                k*=100;
+                if(k>=60){//metal% higher than 60% then extract metal from Bin.
+                    window.location.href="action1.html";
+                }
+                else{// decompose the waste..
+                    window.location.href="action2.html";
+                }
+              }
+              else{
+                window.location.href="action2.html";
+              }
+        }
+    </script>
+</body>
+</html>
