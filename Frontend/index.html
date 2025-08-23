@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="EWMS.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IS&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>EWMS.</title>
+</head>
+
+<body>
+    <header>
+
+        <!-- Navigation Bar -->
+        <div class="navigator">
+            <div class="nav-logo">
+                <img src="EWMS.png" alt="ewms">
+            </div>
+
+            <div class="nav1">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#e_waste_impact">E-Waste Impact</a></li>
+                    <li><a href="#recycle">Recycling Tips</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="nav2">
+                <button><a href="login.html">Log in</a></button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Slider -->
+    
+    <div class="slider-wrapper" id="home">
+        <div class="slider">
+            <img id="e1" src="e waste slide.webp" alt="1">
+            <img id="e2" src="e2.jpeg" alt="2">
+            <img id="e3" src="e3.jpg" alt="3">
+        </div>
+
+
+
+        <div class="slide-nav">
+            <a href="#e1"></a>
+            <a href="#e2"></a>
+            <a href="#e3"></a>
+        </div>
+    </div>
+
+
+    <!-- E-Waste Impact -->
+
+    <div class="container" id="e_waste_impact">
+        
+        <div class="image-container">
+            <img src="waste stats.png" alt="E-Waste Data 1">
+        </div>
+        
+        <div class="text-content">
+            <h1>E-Waste Impact</h1>
+            <p>Over 50 million metric tons of e-waste are generated globally every year, with only 17.4% being recycled properly. E-waste contains toxic substances like lead and mercury, causing severe environmental and health issues. Additionally, valuable materials worth $57 billion annually, such as gold and copper, are lost due to improper recycling. Addressing this issue is crucial for sustainability and reducing the carbon footprint.</p>
+            <p>The informal recycling sector in many developing countries worsens health risks for workers. E-waste accounts for 70% of hazardous waste in landfills, leaking toxic chemicals into soil and water. Proper management of e-waste can conserve natural resources and reduce energy consumption. Public awareness and stricter enforcement of regulations are essential for progress. Governments, corporations, and individuals must collaborate to transition toward a circular economy for electronic devices.</p>
+        </div>
+    
+    </div>
+
+    <!-- Recycling Tips -->
+
+    <div class="recycle-container" id="recycle">
+        
+        <div class="tips">
+            <h1>Recycling Tips</h1>
+            <ul>
+                <li><b>Separate E-Waste Properly:</b> Sort electronic waste from regular trash to prevent hazardous materials from contaminating the environment.</li>
+                <li><b>Find Authorized Recyclers:</b> Dispose of e-waste at certified recycling centers to ensure proper handling and resource recovery.</li>
+                <li><b>Donate or Repair:</b> Extend the life of electronics by donating or repairing them instead of discarding them.</li>
+                <li><b>Data Security First:</b> Erase all personal data from devices before recycling or disposing of them.</li>
+            </ul>
+        </div>
+
+        <div class="recycle-image">
+            <img src="recycling.webp" alt="recycle">
+        </div>
+    </div>
+    
+    <!-- Conntact Us -->
+
+    <div class="contact-container" id="contact">
+        <form>
+            <h1>Contact Us</h1>
+            <input type="text" id="firstname" placeholder="First Name" required>
+            <input type="text" id="lastname" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="mobile" placeholder="Mobile" required>
+            
+            <textarea required placeholder="Type your Message Here..."id="text"></textarea>
+            <input type="submit" value="Send" id="button"onclick="mail()">
+        </form>
+    </div>
+    <script>
+      function mail() {
+    let fname = document.getElementById("firstname").value;
+    let lname = document.getElementById("lastname").value;
+    let email = document.getElementById("email").value;
+    let ph = document.getElementById("mobile").value;
+    let text = document.getElementById("text").value;
+    let mes =  text + "\n\n" +"From :\n"+"Name: " + fname + " " + lname + "\n" + "Phone No: " + ph;
+    const mailtoLink = `mailto:ravivekanuru77@gmail.com?subject=User Email: ${encodeURIComponent(email)}&body=${encodeURIComponent(mes)}`;
+    window.location.href = mailtoLink;
+}
+
+    </script>
+</body>
+</html>

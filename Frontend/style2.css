@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html,body{
+    background-image: url("theme.jpg");
+    background-size: contain;
+}
+
+.message{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.alert{
+    color: red;
+    font-size: 25px;
+}
+
+
+.box{
+    background: linear-gradient(to right, rgb(81, 235, 145), rgb(64, 255, 245));
+    border: 2px solid black;
+    border-radius: 10px;
+    display: absolute;
+    margin-top: 5rem;
+    margin-left: 400px;
+    text-align: center;
+    max-width: 100vh;
+    min-height: 50vh;
+}
+
+.filler{
+    height: 50px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: absolute;
+    margin-left : 55rem;
+    margin-top: 2rem;
+    background-color: rgb(255, 207, 117);
+}
+
+
+.message h1{
+    line-height: 3rem;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 350;
+}
+
+
+.bin{
+    margin: 50px 250px;
+    background-color: rgb(224, 203, 83);
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 7.5px;
+}
+
+.nav-search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-search .search-select{
+    width: 40%;
+    padding: 2px 10px;
+    border-radius: 7px;
+}
+
+.select-btn .btn1{
+    font-family: "Roboto", serif;
+    color: white;
+    background-color: rgb(70, 109, 216);
+    font-size: 20px;
+    margin-top: 30px;
+    border-radius: 7px;
+    padding: 3px 15px;
+}
+
+
+/* Animations */
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }  /* Fully visible */
+    50% { opacity: 0; }  /* Invisible */
+}
+
+.blink {
+    animation: blink 0.85s infinite; /* Blinks every 0.2 seconds */
+}
