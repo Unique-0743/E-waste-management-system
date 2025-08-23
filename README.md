@@ -16,4 +16,5 @@ A smart platform to monitor, collect, and manage e-waste, promoting sustainable 
 - 🗄️ **MongoDB** – Database for storing user data and e-waste information  
 - 🤖 **Arduino** – For interfacing with sensors to track bin levels, weight, and metal detection
 
-![Hard ware preview ](images/ewms-dashboard.png)
+![Hard ware preview ](bin.1.jpeg)
+![Hard ware preview ](bin.2.jpeg)
